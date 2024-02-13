@@ -148,6 +148,10 @@ body {
     border: 0px !important ;
 }
 
+.fc-col-header  {
+    width: 483px !important;
+    margin-bottom: 10px;
+}
 
 .calendar-container {
     flex: 1;
@@ -155,12 +159,23 @@ body {
     width: 60%;
 }
 
+.fc-scrollgrid-sync-table {
+    width: 483px !important;
+    height: 368px !important;
+}
+
+.fc-view-harness .fc-view-harness-active {
+    height: 368px !important;
+}
+
 .timeslots-container {
+    display: none;
     width: 40%;
 }
 
 
 .title-time {
+    font-size: 1.75em;
     margin-bottom: 45px;
 }
 
@@ -180,34 +195,33 @@ body {
 }
 
 .timeslot-list {
-    height: 300px; /* Высота контейнера */
-    overflow-y: scroll; /* Включение вертикальной прокрутки */
+    height: 330px;
+    overflow-y: scroll;
 }
 
-/* Стилизация самой полосы прокрутки */
+
 .timeslot-list::-webkit-scrollbar {
-    width: 5px; /* Ширина полосы прокрутки */
+    width: 5px;
 }
 
-/* Стилизация дорожки прокрутки (трека) */
+
 .timeslot-list::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Цвет фона трека */
-    border-radius: 10px; /* Скругление краёв */
+    background: #f1f1f1; 
+    border-radius: 10px; 
 }
 
-/* Стилизация кнопки прокрутки (thumb) */
+
 .timeslot-list::-webkit-scrollbar-thumb {
-    background: #bdacac; /* Цвет кнопки прокрутки */
-    border-radius: 10px; /* Скругление краёв */
+    background: #d1cece; 
+    border-radius: 10px; 
 }
 
-/* Изменение стиля кнопки прокрутки при наведении */
 .timeslot-list::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Цвет кнопки прокрутки при наведении */
+    background: #555; 
 }
 
 .fc-scroller::-webkit-scrollbar {
-    width: 0px; /* ширина полосы прокрутки */
+    width: 0px; 
 }
 
 .fc-daygrid-day-top {
@@ -230,6 +244,7 @@ body {
     display: inline-block;
     margin: 2px; /* Отступ, чтобы цифры не слипались */
 }
+
 
 .timeslot-list li {
     padding: 10px;

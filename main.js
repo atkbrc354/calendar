@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var calendarEl = document.getElementById("calendar");
-    var timeslotsContainer = document.querySelector('.timeslots-container'); // Получаем контейнер для временных слотов
+    let calendarEl = document.getElementById("calendar");
+    let timeslotsContainer = document.querySelector('.timeslots-container'); // Получаем контейнер для временных слотов
 
     // Инциализация календаря с нужной настройкой
-    var calendar = new FullCalendar.Calendar(calendarEl, {
+    let calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: "dayGridMonth",
         headerToolbar: {
             left: "prev",
@@ -11,11 +11,32 @@ document.addEventListener("DOMContentLoaded", function () {
             right: "next",
         },
         dateClick: function (info) {
-            // Форматирование выбранной даты в желаемом формате и отображение в заголовке
-            var date = new Date(info.dateStr);
-            var options = { weekday: "long", month: "long", day: "numeric" };
-            var formattedDate = date.toLocaleDateString("en-US", options);
 
+            let colHeader = document.querySelector('.fc-col-header');
+            if(colHeader) {
+                colHeader.classList.add('active');
+            }
+
+            let allDayNumbers = document.querySelectorAll('.fc-daygrid-day-number');
+            allDayNumbers.forEach(function(dayNumber) {
+                dayNumber.classList.remove('active');
+            });
+
+            let dayNumber = info.dayEl.querySelector('.fc-daygrid-day-number');
+            if(dayNumber) {
+                dayNumber.classList.add('active');
+            }
+        
+            // Добавление класса 'active' ко всем найденным элементам '.fc-scrollgrid-sync-table'
+            let scrollgridSyncTables = document.querySelectorAll('.fc-scrollgrid-sync-table');
+            scrollgridSyncTables.forEach(function(table) {
+                table.classList.add('active');
+            });
+            // Форматирование выбранной даты в желаемом формате и отображение в заголовке
+            let date = new Date(info.dateStr);
+            let options = { weekday: "long", month: "long", day: "numeric" };
+            let formattedDate = date.toLocaleDateString("en-US", options);
+            
             // Изменение текста заголовка
             document.querySelector(".title-time").textContent = formattedDate;
 
@@ -24,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const timeslotList = document.getElementById("timeslotList");
 
+            
             // Очистка списка для удаления предыдущих временных слотов
             timeslotList.innerHTML = '';
             const timeslots = [

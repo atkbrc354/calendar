@@ -5,6 +5,86 @@
     background-color: #fff;
 }
 
+.VJL48qbQzWENTFAh1Knk {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 105px;
+    height: 105px;
+    text-decoration: none;
+    pointer-events: none;
+    transition: all .1s ease-in;
+    will-change: transform;
+}
+
+.VJL48qbQzWENTFAh1Knk {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 105px;
+    height: 105px;
+    text-decoration: none;
+    pointer-events: none;
+    transition: all .1s ease-in;
+    will-change: transform;
+}
+
+.jWSwi_R_Xl7kPjUhuQoo {
+    position: relative;
+    top: 21px;
+    left: -11px;
+    z-index: 1;
+    display: block;
+    width: 160px;
+    padding: 9px 0 6px;
+    background-color: #505960;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0/20%);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    pointer-events: auto;
+    transition: all .1s ease-in;
+    transform: rotate(45deg);
+}
+
+.VJL48qbQzWENTFAh1Knk._i6SG2jlTfccH2ZZblil::before, .VJL48qbQzWENTFAh1Knk._i6SG2jlTfccH2ZZblil::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #505960;
+    transition: all .1s ease-in;
+}
+
+.VJL48qbQzWENTFAh1Knk._i6SG2jlTfccH2ZZblil::before, .VJL48qbQzWENTFAh1Knk._i6SG2jlTfccH2ZZblil::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #505960;
+    transition: all .1s ease-in;
+}
+
+.V7YfvNqWv0XKYKys7N7K {
+    margin-left: -7px;
+    color: var(--color-grey-4, #F2F2F2);
+    font-size: 8px;
+    text-transform: uppercase;
+}
+
+
+.HvybhIo63ZbBJxHh7Ann {
+    margin-left: -7px;
+    color: #fff;
+    font-size: 14px;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -264,12 +344,39 @@ body {
 
 
 .timeslot-list {
+    display: flex;
+    flex-direction: column;
     max-width: 226px;
 }
 
-.timeslot-list li {
+.timeslot-box {
+    display: flex;
+    gap: 10px;
+}
+
+
+.timeslot-box .next-button {
+    display: none;
     padding: 10px;
-    max-width: 226px;
+    width: 226px;
+    max-height: 52px;
+    vertical-align: top;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color-level2,rgba(0,105,255,0.5));
+    background-color: var(--primary-color,rgb(0,105,255));
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.timeslot__btn-time {
+    padding: 10px;
+    width: 226px;
     max-height: 52px;
     vertical-align: top;
     font-size: 16px;
@@ -283,6 +390,12 @@ body {
     font-weight: 700;
     margin-bottom: 10px;
     cursor: pointer;
+}
+
+.timeslot__btn-time--active {
+    background-color: rgb(0 0 0/60%);
+    color: var(--text-color-secondary-4, rgba(255,255,255,1)); 
+    border-color: transparent;
 }
 
 .fc-theme-standard td, .fc-theme-standard th {

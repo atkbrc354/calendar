@@ -4,12 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: "dayGridMonth",
+        locale: 'ru',
         headerToolbar: {
             left: "prev",
             center: "title",
             right: "next",
         },
         dateClick: function (info) {
+
+            let windowWidth = window.innerWidth; 
+
+                if (windowWidth <= 768) {
+                    document.getElementById('calendar').style.display = 'none';
+                }
 
             let colHeader = document.querySelector('.fc-col-header');
             if(colHeader) {
@@ -33,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let date = new Date(info.dateStr);
             let options = { weekday: "long", month: "long", day: "numeric" };
-            let formattedDate = date.toLocaleDateString("en-US", options);
+            let formattedDate = date.toLocaleDateString("ru-RU", options);
             
             document.querySelector(".title-time").textContent = formattedDate;
 
@@ -58,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     btn.classList.add('timeslot__btn-time--active');
 
                     let nextButton = document.createElement('button');
-                    nextButton.innerText = 'Next';
+                    nextButton.innerText = 'Далее';
                     nextButton.classList.add('next-button');
                     
                     nextButton.addEventListener('click', function() {

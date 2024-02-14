@@ -5,7 +5,7 @@
     background-color: #fff;
 }
 
-.VJL48qbQzWENTFAh1Knk {
+/* .VJL48qbQzWENTFAh1Knk {
     position: absolute;
     top: -5px;
     right: -5px;
@@ -83,7 +83,7 @@
     margin-left: -7px;
     color: #fff;
     font-size: 14px;
-}
+} */
 
 body {
     display: flex;
@@ -97,7 +97,7 @@ body {
     position: relative;
     margin-top: 66px;
     padding-top: 25px;
-    width: 75%;
+    width: 50%;
     border: 1px solid var(--text-color-level3,rgba(26,26,26,0.1));
     border-radius: 8px;
     box-shadow: 0 1px 8px 0 rgb(0 0 0/8%);
@@ -157,10 +157,10 @@ body {
     padding-bottom: 35px;
 }
 
-.desc__join a {
+/* .desc__join a {
     color: var(--primary-color,rgb(0,105,255));
     text-decoration: underline;
-}
+} */
 
 .line {
     position: absolute;
@@ -176,6 +176,7 @@ body {
     margin-bottom: 20px;
     font-weight: 700;
     max-width: 400px;
+    text-align: center;
     margin-right: auto;
     margin-left: auto;
 }
@@ -239,19 +240,17 @@ body {
 }
 
 .fc-col-header.active {
-    max-width: 553px !important;
-    width: 100%;
+    width: 35rem !important;
 }
 
 .fc-scrollgrid-sync-table.active {
-    max-width: 553px !important;
-    width: 100%;
-    height: 368px !important;
+    width: 35rem !important;
+    min-height: 313px;
 }
 
 
-.fc-view-harness .fc-view-harness-active {
-    max-height: 368px !important;
+.fc-view-harness {
+    min-height: 468px !important;
 }
 
 .timeslots-container {
@@ -281,7 +280,7 @@ body {
 }
 
 .timeslot-list {
-    height: 330px;
+    height: 430px;
     overflow-y: scroll;
 }
 
@@ -408,3 +407,105 @@ body {
 .timeslot-list li:hover {
     border-color: var(--primary-color,rgb(0,105,255));
 }
+
+@media (max-width: 1550px) {
+    .container {
+        width: 55%;
+    }
+}
+
+@media (max-width: 1470px) {
+    .container {
+        width: 65%;
+    }
+    .fc-col-header.active {
+        width: 33rem !important;
+    }
+    
+    .fc-scrollgrid-sync-table.active {
+        width: 33rem !important;
+        min-height: 313px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .container {
+        width: 75%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .container {
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .scheduler-container {
+        flex-direction: column;
+    }
+    .calendar-container {
+        width: 100%;
+    }
+    .fc-col-header.active {
+        width: 30rem !important;
+    }
+
+    .fc-scrollgrid-sync-table.active {
+        width: 30rem !important;
+        min-height: 313px;
+    }
+
+    .timeslots-container {
+        width: 100%;
+    }
+    .timeslot-list {
+        max-width: 100%;
+        width: 100%;
+    }
+    .timeslot__btn-time {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 668px) {
+    .logo__name {
+        font-size: 13px;
+    }
+    .calendar_title {
+        font-size: 20px;
+    }
+    .flex span {
+        font-size: 12px;
+    }
+    .desc__join {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 11px;
+    }
+    .title_date_time {
+        font-size: 20px;
+    }
+    .fc-toolbar-title {
+        font-size: 1.0em !important;
+    }
+    .fc-daygrid-day-number {
+        width: 30px;
+        height: 30px;
+    }
+    .fc-button {
+        padding: 0.5em 0.5em !important;
+    }
+}
+

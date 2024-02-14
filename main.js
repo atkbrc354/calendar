@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     nextButton.classList.add('next-button');
                     
                     nextButton.addEventListener('click', function() {
-                        console.log('Кнопка Next была нажата');
+                        window.location.href = 'email.html';
                     });
 
                     btn.parentElement.appendChild(nextButton);

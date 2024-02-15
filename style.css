@@ -2,9 +2,11 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #fff;
+    background-color: #121212; /* Темный фон */
+    border: 1px solid rgba(0, 255, 255, 0.6); /* Светло-синяя рамка для акцента */
+    box-shadow: 0 0 10px 0 rgba(0, 255, 255, 0.6); /* Неоновое свечение вокруг контейнера */
+    color: #0ff; /* Ярко-голубой, неоновый текст */
 }
-
 /* .VJL48qbQzWENTFAh1Knk {
     position: absolute;
     top: -5px;
@@ -84,13 +86,6 @@
     color: #fff;
     font-size: 14px;
 } */
-
-body {
-    display: flex;
-    justify-content: center;
-    line-height: 1.5;
-    font-family: proxima nova,sans-serif;
-}
 
 
 .container {
@@ -331,13 +326,18 @@ body {
     margin: 2px;
 }
 
+.fc .fc-daygrid-day-frame {
+    border: 1px solid #005555; /* Изменение цвета границы для соответствия стилю */
+    box-shadow: 0 0 10px #00ffff;
+}
+
 .fc-daygrid-day-number.active {
     background-color: var(--primary-color, rgb(0,105,255)); 
     color: white; 
     border-radius: 50%;
 }
 
-.fc-daygrid-day.fc-day-today {
+ж.fc-daygrid-day.fc-day-today {
     background-color: #fff !important;
 }
 
@@ -408,6 +408,128 @@ body {
     border-color: var(--primary-color,rgb(0,105,255));
 }
 
+/* киберпанк */
+
+body {
+    background-color: #0a0a0a; /* Темный фон для киберпанкового вида */
+    color: #0ff; /* Неоновый текст */
+    font-family: 'Orbitron', sans-serif; /* Изменение шрифта на более футуристический */
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+.container, .fc-button-group, .fc .fc-toolbar, .calendar-container {
+    border: 1px solid #005555; /* Изменение цвета границы для соответствия стилю */
+    box-shadow: 0 0 10px #00ffff; /* Добавление неонового свечения */
+    background: #111; /* Затемненный фон */
+}
+
+.logo, .fc .fc-button-primary, .timeslot__btn-time--active, .fc .fc-button:focus {
+    border: 1px solid #00ffff; /* Яркий неоновый контур */
+    box-shadow: 0 0 5px #00ffff; /* Отблеск для добавления глубины */
+}
+
+.content__title-top, .calendar_title, .title_date_time, .title-time {
+    color: #0ff; /* Изменяем цвет текста для соответствия киберпанковому стилю */
+    text-shadow: 0 0 5px #00ffff; /* Добавляем неоновое свечение к тексту */
+}
+
+.block-content-icons .icons__box {
+    filter: drop-shadow(0 0 5px #00ffff); /* Добавляем свечение к иконкам */
+}
+
+.fc-daygrid-day-number, .fc .fc-col-header-cell-cushion {
+    color: #00ffff; /* Меняем цвет текста на неоновый */
+}
+
+.fc .fc-button-primary {
+    background-color: transparent; /* Прозрачный фон для кнопок */
+    color: #0ff; /* Неоновый текст */
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #005555; /* Темно-синий фон при наведении */
+    color: #fff;
+    border-color: #00ffff; /* Ярко-голубой цвет границ */
+    box-shadow: 0 0 10px #00ffff; /* Усиление свечения */
+}
+
+.timeslot-list {
+    background-color: #111; /* Затемненный фон для списка */
+}
+
+.timeslot__btn-time {
+    background-color: #222; /* Темный фон кнопок */
+    color: #00ffff; /* Неоновый текст */
+    border: 1px solid #005555; /* Граница в стиле киберпанк */
+}
+
+.timeslot__btn-time:hover {
+    color: #fff; /* Светлый текст при наведении */
+    background-color: #005555; /* Темно-синий фон */
+    box-shadow: 0 0 10px #00ffff; /* Неоновое свечение */
+}
+
+body {
+    background-color: #111; /* Темный фон */
+    color: #fff; /* Светлый текст */
+    font-family: 'Orbitron', sans-serif; /* Футуристический шрифт */
+}
+
+.container {
+    border: 1px solid rgba(0,255,255,0.5); /* Сине-зеленая рамка */
+    box-shadow: 0 0 15px 5px rgba(0,255,255,0.5); /* Неоновое свечение */
+}
+
+.content__title-top, .calendar_title, .title_date_time, .title-time {
+    color: #0ff; /* Неоново-голубой цвет текста */
+}
+
+.logo__name {
+    color: #0ff; /* Неоново-голубой цвет текста */
+}
+
+.block-content-icons .icons__box {
+    filter: brightness(0) invert(1); /* Изменяет иконки на белый цвет */
+}
+
+.fc .fc-button-primary {
+    color: #ff00ff; /* Ярко-розовый цвет текста */
+    background-color: rgba(255, 0, 255, 0.2); /* Легкий розовый фон */
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff; /* Розовое свечение */
+}
+
+.fc .fc-button-primary:hover {
+    background-color: rgba(255, 0, 255, 0.4); /* Ярче при наведении */
+}
+
+.timeslot-list, .timeslot-box, .fc-col-header {
+    background-color: #222; /* Слегка светлее фон */
+    border: 1px solid #333; /* Границы элементов */
+}
+
+.timeslot__btn-time, .next-button {
+    background-color: transparent;
+    color: #0ff; /* Неоново-голубой цвет текста */
+    border: 1px solid #0ff; /* Неоново-голубая рамка */
+}
+
+.timeslot__btn-time:hover, .next-button:hover {
+    color: #fff; /* Светлый текст при наведении */
+    background-color: #005555; /* Темно-зеленый фон */
+}
+
+/* Анимация для неоновых кнопок */
+@keyframes neonButtonGlow {
+    from {box-shadow: 0 0 5px #0ff, 0 0 15px #0ff, 0 0 30px #0ff;}
+    to {box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;}
+}
+
+.timeslot__btn-time:hover {
+    animation: neonButtonGlow 1.5s infinite alternate;
+}
+
 @media (max-width: 1550px) {
     .container {
         width: 55%;
@@ -419,11 +541,11 @@ body {
         width: 65%;
     }
     .fc-col-header.active {
-        width: 33rem !important;
+        width: 30rem !important;
     }
     
     .fc-scrollgrid-sync-table.active {
-        width: 33rem !important;
+        width: 30rem !important;
         min-height: 313px;
     }
 }

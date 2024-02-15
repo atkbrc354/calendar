@@ -1,101 +1,104 @@
 body {
-    font-family: proxima nova,sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
+    background-color: #121212; /* Темный фон для всей страницы */
+    color: #c9d1d9; /* Светлый текст для контраста */
 }
 
 .form {
-    max-width: 500px; 
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 10px; 
+    border-radius: 10px;
+    background-color: #1f2833; /* Темно-серый фон формы */
+    border: 1px solid #66fcf1; /* Основной цвет кибер-стиля для рамки */
+    /* Добавим немного свечения */
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.7);
 }
 
 .form__title {
-    color: var(--text-color, rgb(26,26,26));
-    margin-bottom: 20px; 
+    color: #66fcf1; /* Ярко-голубой цвет заголовка */
+    margin-bottom: 20px;
 }
 
 .form__label {
     display: block;
     margin-bottom: 5px;
+    color: #45a29e; /* Светлый зеленовато-голубой цвет текста */
 }
 
 .form__input,
 .form__textarea {
+    max-width: 400px;
     width: 100%;
-    padding: 10px; 
-    margin-bottom: 20px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #0b0c10; /* Черный цвет фона */
+    color: #66fcf1; /* Ярко-голубой текст */
+    border: 1px solid #45a29e; /* Светлый зеленовато-голубой цвет рамки */
     border-radius: 8px;
+    /* Стиль фокуса для добавления свечения */
+    outline: none;
 }
 
-.form__input:focus {
-    border: 1px solid #007bff; 
-    outline: none; 
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
-    background-color: #f8f8f8;
+.form__input:focus, .form__textarea:focus {
+    border-color: #66fcf1;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.7); /* Свечение при фокусе */
+    background-color: #1f2833; /* Темный фон при фокусе */
 }
 
-.form__textarea:focus {
-    border: 1px solid #007bff; 
-    outline: none; 
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
-    background-color: #f8f8f8;
-}
 
 .form__button {
-    padding: 10px 0; 
-    margin-bottom: 15px; 
+    padding: 10px 0;
+    margin-bottom: 15px;
     max-width: 137px;
     width: 100%;
-    background: none;
+    background: #0b0c10; /* Черный фон */
     font-size: 14px;
-    border-color: var(--primary-color, rgb(0,105,255));
-    color: var(--primary-color, rgb(0,105,255));
+    border: 1px solid #66fcf1; /* Ярко-голубая рамка */
+    color: #66fcf1; /* Ярко-голубой цвет текста */
     border-radius: 40px;
-    cursor: pointer; 
+    cursor: pointer;
+    /* Добавим эффект перехода для анимации */
+    transition: all 200ms ease-in-out;
 }
 
-.form__button--secondary {
-    border-color: var(--primary-color, rgb(0,105,255));
-    color: var(--primary-color, rgb(0,105,255));
-}
 
-.form__button--primary {
+
+/* Переопределение стилей для .form__button--secondary также нужно, если используется */
+.form__button--primary, .form__button--secondary {
     width: 100%;
     font-size: 16px;
-    background-color: #007bff; 
-    color: var(--text-color-secondary-4, rgba(255,255,255,1));
+    background-color: #45a29e; /* Светлый зеленовато-голубой цвет */
+    color: #0b0c10; /* Черный текст */
     font-weight: 700;
     line-height: 22px;
-    padding: 10px 0; 
-    margin-bottom: 15px; 
-    border: none;
+    padding: 10px 0;
+    margin-bottom: 15px;
     border-radius: 40px;
-    cursor: pointer; 
-    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    border: none;
 }
 
-.form__button--primary:hover {
-    transition: all 200ms ease-in-out;
-    border-color: var(--primary-color-darker-10, rgba(0,95,230,1));
-    background-color: var(--primary-color-darker-10, rgba(0,95,230,1));
+.form__button--primary:hover,
+.form__button--secondary:hover {
+    background-color: #66fcf1; /* Ярко-голубой цвет при наведении */
+    color: #1f2833; /* Темный текст при наведении */
+    border-color: #45a29e; /* Убедитесь, что color и border-color соответствуют при наведении */
 }
 
 .form__text,
 .form__disclaimer-top {
+    max-width: 400%;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #c9d1d9; /* Светлый текст */
     border-radius: 8px;
-    margin-bottom: 15px; 
-}
-
-.form__disclaimer-top {
-    margin-bottom: 15px; 
 }
 
 .form__disclaimer {
     border-radius: 8px;
     font-size: 0.9rem;
-    color: var(--primary-color, rgb(0,105,255));
+    color: #45a29e; /* Светлый зеленовато-голубой цвет */
     margin-bottom: 15px;
 }
 

@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./basic.css">
     <link rel="stylesheet" href="./email.css">
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js
+"></script>
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css
+" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -14,11 +20,9 @@
         <!-- <a
           href="/?utm_campaign=sign_up&amp;utm_medium=badge&amp;utm_source=invitee"
           target="_blank"
-          class="VJL48qbQzWENTFAh1Knk e9TS9yoMqqIN2PqBo1QG _i6SG2jlTfccH2ZZblil"
-          ><div
+          class="VJL48qbQzWENTFAh1Knk e9TS9yoMqqIN2PqBo1QG _i6SG2jlTfccH2ZZblil"><div
             data-id="branding"
-            class="jWSwi_R_Xl7kPjUhuQoo _igrKj_5lj_5nWQu8DPw"
-          >
+            class="jWSwi_R_Xl7kPjUhuQoo _igrKj_5lj_5nWQu8DPw">
             <div class="V7YfvNqWv0XKYKys7N7K __d5yUqDgBEjoX7J2dql">
               powered by
             </div>
@@ -43,57 +47,49 @@
           <div data-container="details" class="block-content-icons">
             <div class="flex">
               <div class="icons__box">
-                <div class="">
-                  <span aria-hidden="true" class="time__icons"
-                    ><svg
+                <div class>
+                  <span aria-hidden="true" class="time__icons"><svg
                       data-id="details-item-icon"
                       viewBox="0 0 10 10"
                       xmlns="http://www.w3.org/2000/svg"
-                      role="img"
-                    >
+                      role="img">
                       <path
                         d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z"
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                        stroke-linejoin="round"></path>
                       <path
                         d="M5 3.269V5l1.759 2.052"
                         fill="none"
                         stroke="currentColor"
                         stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                        stroke-linejoin="round"></path>
                     </svg>
                   </span>
                 </div>
               </div>
               <span>45 мин.</span>
             </div>
-            <div data-component="event-type-location" class="">
+            <div data-component="event-type-location" class>
               <div class="flex">
                 <div class="icons__box">
                   <div class="time__icons">
-                    <span aria-hidden="true" class=""
-                      ><svg
+                    <span aria-hidden="true" class><svg
                         data-testid="location-marker-icon"
                         data-id="details-item-icon"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 10 10"
-                        role="img"
-                      >
+                        role="img">
                         <path
                           stroke="currentColor"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          d="M8 3.5c0 2.5-3 6-3 6S2 6 2 3.5a3 3 0 1 1 6 0v0Z"
-                        ></path>
+                          d="M8 3.5c0 2.5-3 6-3 6S2 6 2 3.5a3 3 0 1 1 6 0v0Z"></path>
                         <path
                           stroke="currentColor"
-                          d="M5 4a.5.5 0 0 1 0-1M5 4a.5.5 0 0 0 0-1"
-                        ></path>
+                          d="M5 4a.5.5 0 0 1 0-1M5 4a.5.5 0 0 0 0-1"></path>
                       </svg>
                     </span>
                   </div>
@@ -104,8 +100,8 @@
           </div>
         </div>
         <div>
-          <div class="">
-            <div class="">
+          <div class>
+            <div class>
               <p class="desc__join">
                 Присоединяйтесь к комнате с идентификатором: X-9348rfh45hg788 по адресу
                 <!-- <a href="https://x-call.app" target="_blank">x-call.app</a> -->
@@ -116,21 +112,76 @@
       </div>
       <div class="line"></div>
       <div class="container__email">
-        <form action="" class="form">
-            <h2 class="form__title">Введите детали</h2>
-            <label for="nameInput" class="form__label">Имя  *</label>
-            <input type="text" id="nameInput" class="form__input">
-            
-            <label for="emailInput" class="form__label">Электронная почта  *</label>
-            <input type="text" id="emailInput" class="form__input">
-    
-            
-            <p class="form__text">Пожалуйста, поделитесь всем, что поможет подготовиться к нашей встрече.</p>
-            <textarea cols="30" rows="5" class="form__textarea"></textarea>
-            
-            <button class="form__button--primary">Запланировать мероприятие</button>
+        <form action class="form" id="tg">
+          <h2 class="form__title">Введите детали</h2>
+          <label for="nameInput" class="form__label">Имя *</label>
+          <input type="text" id="nameInput" class="form__input" name="name">
+
+          <label for="emailInput" class="form__label">Электронная почта
+            *</label>
+          <input type="email" id="emailInput" class="form__input" name="email">
+
+          <p class="form__text">Пожалуйста, поделитесь всем, что поможет
+            подготовиться к нашей встрече.</p>
+          <textarea cols="30" rows="5"
+            class="form__textarea" name="comment"></textarea>
+
+          <p class="form__disclaimer-top">Продолжая, вы подтверждаете, что
+            прочитали и согласны с</p>
+          <p class="form__disclaimer">Условия использования Calendly и <br>
+            Уведомление о конфиденциальности</p>
+
+          <button class="form__button--primary">Запланировать
+            мероприятие</button>
         </form>
       </div>
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script>
+      const TOKEN = "6877914896:AAFswKPyjvVFCnWA4bJeZlQyCRc1BBEU-DA";
+      const CHAT_ID = "-1002006029318";
+      const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+      document.getElementById("tg").addEventListener('submit', function(e){
+        e.preventDefault();
+
+        let message = `<b>Заявка с сайта!</b>\n`;
+        message += `<b>Отправитель: </b>  ${this.name.value}\n`
+        message += `<b>Почта: </b>  ${this.email.value}\n`
+        message += `<b>Комментарий: </b>  ${this.comment.value}\n`
+      
+        if(this.name.value && this.email.value ){       
+          this.name.value = "";
+          this.email.value = "";
+          this.comment.value = "";
+          Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Успешно!",
+          showConfirmButton: false,
+          timer: 2000
+          });
+          axios.post(URI_API,{
+          chat_id: CHAT_ID,
+          parse_mode: 'html',
+          text: message
+        }).then(() =>{
+          setTimeout(()=> {
+          window.location.href =  "home.html"
+        }, 2000)
+        })
+        }
+        else{       
+          Swal.fire({
+          icon: "error",
+          title: "Заполните все обязательные поля!",
+          ext: "Заполните все поля!",
+          });
+        }
+      })
+    </script>
   </body>
 </html>

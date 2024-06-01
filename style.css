@@ -147,9 +147,16 @@
 
 .desc__join {
     font-size: 16px;
-    font-family: proxima nova,sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     line-height: 1.5;
     padding-bottom: 35px;
+    color: #66fcf1; /* Яркий неоновый цвет текста */
+    text-shadow: 0 0 5px #0ff, /* Этот светло-голубой оттенок придаст тексту неоновое свечение */
+                 0 0 10px #0ff, 
+                 0 0 20px #0ff, 
+                 0 0 40px #0ff;
+ /* Темный фон для контраста с текстом */
+    padding: 20px;
 }
 
 /* .desc__join a {
@@ -235,11 +242,11 @@
 }
 
 .fc-col-header.active {
-    width: 35rem !important;
+    width: 38rem !important;
 }
 
 .fc-scrollgrid-sync-table.active {
-    width: 35rem !important;
+    width: 38rem !important;
     min-height: 313px;
 }
 
@@ -264,7 +271,7 @@
 }
 
 .fc .fc-cell-shaded, .fc .fc-day-disabled {
-    background: #fff !important;
+    background-color: #121212 !important;
 }
 
 .timeslot-list {
@@ -326,21 +333,15 @@
     margin: 2px;
 }
 
-.fc .fc-daygrid-day-frame {
-    border: 1px solid #005555; /* Изменение цвета границы для соответствия стилю */
-    box-shadow: 0 0 10px #00ffff;
-}
-
 .fc-daygrid-day-number.active {
-    background-color: var(--primary-color, rgb(0,105,255)); 
-    color: white; 
+    background-color: #0ff; /* Яркий неоновый циан */
+    color: #000; /* Черный цвет текста для контраста */
     border-radius: 50%;
+    border: 2px solid #f0f; /* Ярко-розовая обводка */
+    box-shadow: 0 0 10px #0ff, 0 0 20px #f0f inset; /* Неоновое свечение */
+    text-shadow: 0 0 5px #f0f, 0 0 10px #f0f; /* Текстовое свечение */
+    transition: all 0.5s ease; /* Плавный эффект перехода */
 }
-
-ж.fc-daygrid-day.fc-day-today {
-    background-color: #fff !important;
-}
-
 
 .timeslot-list {
     display: flex;
@@ -408,7 +409,31 @@
     border-color: var(--primary-color,rgb(0,105,255));
 }
 
+.icons__box {
+    filter: drop-shadow(0 0 5px #ff00ff); /* Розовое свечение */
+    transition: filter 0.3s ease; /* Плавное изменение свечения */
+}
+
+.icons__box:hover, .icons__box:focus {
+    filter: drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 15px #00ffff); /* Усиленное свечение и добавление синего цвета при наведении */
+    animation: neonGlow 1.5s infinite alternate; /* Анимация для эффекта "пульсации" свечения */
+}
+
+@keyframes neonGlow {
+    from {
+        filter: drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 15px #00ffff);
+    }
+    to {
+        filter: drop-shadow(0 0 15px #ff00ff) drop-shadow(0 0 20px #00ffff);
+    }
+}
+
+
 /* киберпанк */
+
+.fc .fc-daygrid-day.fc-day-today {
+    background-color:   #121212!important; /* Темно-синий фон */
+}
 
 body {
     background-color: #0a0a0a; /* Темный фон для киберпанкового вида */
@@ -420,8 +445,6 @@ body {
 }
 
 .container, .fc-button-group, .fc .fc-toolbar, .calendar-container {
-    border: 1px solid #005555; /* Изменение цвета границы для соответствия стилю */
-    box-shadow: 0 0 10px #00ffff; /* Добавление неонового свечения */
     background: #111; /* Затемненный фон */
 }
 
@@ -435,9 +458,7 @@ body {
     text-shadow: 0 0 5px #00ffff; /* Добавляем неоновое свечение к тексту */
 }
 
-.block-content-icons .icons__box {
-    filter: drop-shadow(0 0 5px #00ffff); /* Добавляем свечение к иконкам */
-}
+
 
 .fc-daygrid-day-number, .fc .fc-col-header-cell-cushion {
     color: #00ffff; /* Меняем цвет текста на неоновый */
@@ -490,9 +511,6 @@ body {
     color: #0ff; /* Неоново-голубой цвет текста */
 }
 
-.block-content-icons .icons__box {
-    filter: brightness(0) invert(1); /* Изменяет иконки на белый цвет */
-}
 
 .fc .fc-button-primary {
     color: #ff00ff; /* Ярко-розовый цвет текста */
@@ -504,23 +522,18 @@ body {
     background-color: rgba(255, 0, 255, 0.4); /* Ярче при наведении */
 }
 
-.timeslot-list, .timeslot-box, .fc-col-header {
-    background-color: #222; /* Слегка светлее фон */
-    border: 1px solid #333; /* Границы элементов */
-}
-
 .timeslot__btn-time, .next-button {
     background-color: transparent;
-    color: #0ff; /* Неоново-голубой цвет текста */
-    border: 1px solid #0ff; /* Неоново-голубая рамка */
+    color: #0ff; 
+    border: 1px solid #0ff; 
 }
 
 .timeslot__btn-time:hover, .next-button:hover {
-    color: #fff; /* Светлый текст при наведении */
-    background-color: #005555; /* Темно-зеленый фон */
+    color: #fff; 
+    background-color: #005555; 
 }
 
-/* Анимация для неоновых кнопок */
+
 @keyframes neonButtonGlow {
     from {box-shadow: 0 0 5px #0ff, 0 0 15px #0ff, 0 0 30px #0ff;}
     to {box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;}
@@ -529,10 +542,37 @@ body {
 .timeslot__btn-time:hover {
     animation: neonButtonGlow 1.5s infinite alternate;
 }
+.timeslot-box .next-button:hover {
+    animation: neonButtonGlow 1.5s infinite alternate;
+}
+
+.timeslot-box .next-button {
+    background-color: transparent;
+    color: #0ff; 
+    border: 1px solid #0ff;  /* Плавные переходы для анимационного эффекта */
+}
+
+.timeslot-box .next-button:hover, .timeslot-box .next-button:focus {
+    color: #fff; /* Светлый текст при наведении */
+    background-color: #005555; /* Темно-синий фон */
+    box-shadow: 0 0 10px #00ffff; /* Неоновое свечение */ /* Слегка увеливаем размер кнопки при наведении для динамики */
+}
+
+.flex span {
+    color: #0ff; 
+}
 
 @media (max-width: 1550px) {
     .container {
         width: 55%;
+    }
+    .fc-col-header.active {
+        width: 31rem !important;
+    }
+    
+    .fc-scrollgrid-sync-table.active {
+        width: 31rem !important;
+        min-height: 313px;
     }
 }
 
@@ -541,11 +581,22 @@ body {
         width: 65%;
     }
     .fc-col-header.active {
-        width: 30rem !important;
+        width: 33rem !important;
     }
     
     .fc-scrollgrid-sync-table.active {
-        width: 30rem !important;
+        width: 33rem !important;
+        min-height: 313px;
+    }
+}
+
+@media (max-width: 870px) {
+    .fc-col-header.active {
+        width: 25rem !important;
+    }
+    
+    .fc-scrollgrid-sync-table.active {
+        width: 25rem !important;
         min-height: 313px;
     }
 }
@@ -630,4 +681,13 @@ body {
         padding: 0.5em 0.5em !important;
     }
 }
+
+
+@media (max-width: 468px) {
+    .block-content-icons {
+        flex-direction: column;
+    }
+}
+
+
 

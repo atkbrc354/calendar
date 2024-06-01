@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
             right: "next",
         },
         dateClick: function (info) {
-
             let windowWidth = window.innerWidth; 
 
                 if (windowWidth <= 768) {
